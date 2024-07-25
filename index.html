@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>BELAJAR TAILWIND</title>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    spacing: {
+                        13: '3.25rem'
+                    },
+                    fontFamily: {
+                        inter: ['Inter'],
+                    },
+                    animation: {
+                        'spin-slow': 'spin 3s linear infinite',
+                        'goyang': 'goyang 1s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        goyang: {
+                            '0%, 100%': { transform: 'rotate(-3deg)' },
+                            '50%': { transform: 'rotate(3deg)' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        #toggle:checked ~ label div.toggle-circle {
+            @apply translate-x-3;
+        }
+    </style>
+</head>
+
+<body class="dark:bg-slate-900 dark:text-white">
+    <h1 class="text-6xl font-bold text-center m-8">Mari Belajar <span
+            class="bg-gradient-to-r from-blue-500 to-red-500 bg-clip-text text-transparent">Tailwind CSS</span></h1>
+    <!-- Latihan Spacing Start -->
+    <section class="mb-10 bg-blue-100">
+        <h2 class="text-2xl text-center my-2">Spacing</h2>
+        <div class="m-4 bg-blue-400">Margin</div>
+        <div class="py-8 bg-blue-400">Padding</div>
+    </section>
+    <!-- Latihan Spacing End -->
+
+    <!-- Latihan Sizing Start -->
+    <section class="mb-10 bg-red-200">
+        <div class="text-2xl text-center my-2">sizing</div>
+        <div class="w-32 h-40 bg-red-400">kotak 1</div>
+    </section>
+    <!-- Latihan Sizing End -->
+
+    <!-- Latihan Typography Start -->
+    <section class="mb-10 font-inter max-w-3xl mx-auto">
+        <h2 class="mb-2 text-4xl font-bold">Belajar mengenai typography pada tailwind css</h2>
+        <div class="mb-4">
+            By Dimas Habibi, 16 juli 2024
+        </div>
+        <p class="mb-4">
+            Lorem ipsum dolor, sit amet <a href="" class="underline font-semibold text-blue-600">consectetur</a>
+            adipisicing elit.
+            Modi doloribus animi porro corrupti incidunt
+            aliquid itaque quis nostrum laboriosam? Expedita cumque a explicabo ex nam, sint possimus incidunt dolorum
+            enim architecto voluptas quidem consequuntur fugit ut quaerat qui hic esse voluptates est unde suscipit?
+            Blanditiis commodi nesciunt quod ipsum eius.
+        </p>
+        <blockquote class="mb-4 italic font-thin text-xl">"Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Alias officiis
+            similique
+            repellendus a
+            et numquam animi harum aperiam hic ab?"</blockquote>
+        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quas modi assumenda facere
+            ipsam suscipit repudiandae commodi. Doloremque expedita beatae deserunt! A facilis vitae fugiat quos,
+            voluptatem sequi quasi veniam!</p>
+    </section>
+    <!-- Latihan Typography End -->
+
+    <!-- Latihan Background Start -->
+    <div class="max-w-xl h-96 bg-[#677D6A] mx-auto overflow-auto bg-local"
+        style="background-image: url('img/gambar1.jpeg');">
+        <p class="p-5 text-2xl text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quo obcaecati aperiam odio molestias vitae
+            qui, necessitatibus, repellendus optio praesentium quia nobis rem mollitia odit consequatur dicta. Obcaecati
+            aperiam delectus temporibus, accusantium accusamus laudantium veritatis non, cumque earum inventore natus
+            autem maxime numquam vitae placeat modi commodi sint. Molestias deleniti officia ad reprehenderit laboriosam
+            quod fuga, iusto est assumenda eos dicta velit quidem dolor? Vitae aspernatur nobis voluptate similique! At
+            fugit minima aliquid eaque dignissimos cumque eveniet sapiente unde quas ipsum obcaecati, nostrum
+            laudantium, repellat exercitationem iusto illo quaerat porro dolor. Maxime quia placeat ipsa quidem
+            quibusdam exercitationem fugit temporibus. Eveniet nostrum quibusdam dicta quisquam! At alias, soluta
+            pariatur repudiandae mollitia in doloribus laudantium quidem fuga quia nesciunt quam sunt velit animi
+            accusantium perferendis aperiam iure voluptatibus laborum consectetur eius. Fugit ratione nostrum
+            laudantium, fugiat cum quas, eligendi eius, vitae quam alias deserunt aperiam praesentium. Ea dignissimos
+            mollitia ducimus officia velit labore maiores blanditiis inventore modi at assumenda eveniet alias eaque
+            facere sit aut est quaerat vero, temporibus corrupti eius. Esse praesentium aperiam in facilis provident
+            odit. Veritatis, recusandae dignissimos? Corporis excepturi deleniti natus recusandae consectetur quasi
+            explicabo. Praesentium odit optio labore sunt aut ipsa quae ut dolorem exercitationem omnis?
+        </p>
+    </div>
+
+    <div class="mt-32 max-w-xl mx-auto h-96 bg-[#677D6A] bg-blend-multiply bg-fixed bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-400 overflow-hidden "
+        style="background-image: url('img/gambar2.jpeg');">
+        <div class="w-full h-full">
+            <p class="p-10 font-semibold text-white mt-36">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
+                quod. Officia
+                saepe iure, esse officiis consequatur soluta. Laborum, in minima.</p>
+            <button
+                class="p-2 -mt-28 ml-10 bg-green-700 text-white font-semibold rounded-md hover:bg-green-400 transition .2s">Read
+                More</button>
+        </div>
+    </div>
+    <!-- Latihan Background End -->
+
+    <hr class="my-20" />
+
+
+    <div class="flex justify-center">
+        <span class="mr-2 text-slate-500">Light</span>
+        <input type="checkbox" id="toggle" class="hidden">
+        <label for="toggle">
+            <div class="w-9 h-5 border rounded-full flex items-center p-1 cursor-pointer bg-slate-200">
+                <div class="w-4 h-4 bg-slate-700 rounded-full toggle-circle"></div>
+            </div>
+        </label>
+
+        <span class="ml-2 text-slate-500">Dark</span>
+    </div>
+
+
+    <!-- Button Start -->
+    <button
+        class="my-10 bg-blue-300 px-5 py-2 rounded-full text-white font-semibold font-inter block mx-auto hover:bg-blue-500 active:bg-blue-700 focus:ring dark:bg-purple-600 dark:hover:bg-purple-400">Simpan</button>
+    <!-- Button End -->
+
+    <!-- Card Start -->
+    <div
+        class="max-w-xl my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md shadow-slate-200 font-inter hover:bg-sky-300 dark:hover:bg-purple-600 group font-serif">
+        <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:text-slate-200">My Card</h5>
+        <p
+            class="text-slate-600 group-hover:text-white selection:bg-red-200 selection:text-black first-line:uppercase first-line:tracking-wide first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:text-slate-300">
+            Lorem ipsum dolor sit
+            amet consectetur
+            adipisicing elit. Animi
+            facilis, optio eligendi
+            soluta nulla
+            dignissimos tempora consequatur at quidem accusantium libero repellendus obcaecati explicabo quae natus,
+            nihil nemo error sint!</p>
+    </div>
+    <!-- Card End -->
+
+    <!-- Form Start -->
+    <div
+        class="max-w-lg border border-slate-200 rounded-xl mx-auto shadow-md p-5 font-inter dark:border-slate-200 dark:shadow-slate-200">
+        <form action="">
+            <label for="email">
+                <span
+                    class="block font-semibold mb-1 text-slate-800  after:content-['*'] after:text-red-400 after:ml-0.5 dark:text-slate-200">Email</span>
+                <input type="email" name="" id="email" placeholder="Masukkan Email Anda"
+                    class="border px-3 py-2 rounded-md w-full shadow block text-sm placeholder:text-slate-400 focus:outline-none  focus:ring-1 focus:ring-slate-500 focus:border-slate-500 invalid:text-red-600 invalid:focus:ring-red-600 invalid:focus:border-red-600 peer">
+                <p class="text-xs m-1 text-red-600 invisible peer-invalid:visible">Email Tidak Valid</p>
+            </label>
+        </form>
+    </div>
+    <!-- Form End -->
+
+    <hr class="my-20" />
+
+    <div class=" max-w-sm mb-20 p-7 border rounded-md border-slate-300 shadow-lg mx-auto">
+        <h2 class="text-xl font-semibold font-inter text-center text-slate-600 dark:text-slate-200">Belajar Animation
+            Dan Transition</h2>
+    </div>
+
+
+    <div
+        class="w-40 h-40 bg-sky-500 mx-auto rounded-lg shadow-lg hover:scale-120 hover:rotate-180 origin-bottom-left transition">
+    </div>
+
+    <div class="w-40 h-40 border mx-auto mt-20 group">
+        <div
+            class="w-40 h-40 bg-sky-500 mx-auto rounded-lg shadow-lg group-hover:rotate-180 origin-bottom-left transition duration-1000 ease-in-out delay-500">
+        </div>
+    </div>
+
+    <div class="w-40 h-40 mt-20 bg-pink-500 mx-auto rounded-lg shadow-lg animate-goyang">
+    </div>
+
+    <hr class="my-20" />
+
+    <div class="container px-10 mx-auto">
+        <h2 class="text-xl font-semibold my-8 font-inter text-center">Belajar Layout</h2>
+        <div class="border rounded-lg shadow-lg p-10 mb-10">
+            <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Magnam
+                ipsum
+                laborum repellendus consequuntur
+                cumque magni minus ad sit excepturi ab ipsa eligendi laudantium modi eaque delectus, ratione corporis
+                qui
+                ducimus illum rerum, nobis incidunt, dolores alias officiis. Est nesciunt sint quas repellat quia
+                officia
+                illo, incidunt iusto odio laudantium nisi?</p>
+        </div>
+
+        <div class="border rounded-lg shadow-lg p-10 mb-10 text-justify relative">
+            <div class="w-10 h-10 bg-pink-200 rounded-full flex absolute -top-5 -right-5 cursor-pointer "><span
+                    class="m-auto">❌</span></div>
+            <img src="img/gambar1.jpeg" alt="" width="150px" class="float-left mr-4">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Magnam
+                ipsum
+                laborum repellendus consequuntur
+                cumque magni minus ad sit excepturi ab ipsa eligendi laudantium modi eaque delectus, ratione corporis
+                qui
+                ducimus illum rerum, nobis incidunt, dolores alias officiis. Est nesciunt sint quas repellat quia
+                officia
+                illo, incidunt iusto odio laudantium nisi?</p>
+        </div>
+
+        <div class="border rounded-lg shadow-lg p-10 mb-10 text-justify relative">
+            <div
+                class="w-10 h-10 border shadow-md bg-slate-50  rounded-full flex fixed bottom-5 right-5 cursor-pointer ">
+                <a href="#" class="text-xl m-auto">🔝</a>
+            </div>
+            <img src="img/gambar1.jpeg" alt="" width="150px" class="float-left mr-4">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Magnam
+                ipsum
+                laborum repellendus consequuntur
+                cumque magni minus ad sit excepturi ab ipsa eligendi laudantium modi eaque delectus, ratione corporis
+                qui
+                ducimus illum rerum, nobis incidunt, dolores alias officiis. Est nesciunt sint quas repellat quia
+                officia
+                illo, incidunt iusto odio laudantium nisi?</p>
+        </div>
+    </div>
+
+    <div class="container mx-auto border rounded-lg shadow-lg p-10 mt-20 columns-3">
+        <img class="mb-4" src="img/gambar2.jpeg" alt="">
+        <img class="mb-4" src="img/gambar1.jpeg" alt="">
+        <img class="mb-4" src="img/gambar1.jpeg" alt="">
+        <img class="mb-4" src="img/gambar2.jpeg" alt="">
+        <img class="mb-4" src="img/gambar2.jpeg" alt="">
+        <img class="mb-4" src="img/gambar1.jpeg" alt="">
+    </div>
+
+    <hr class="my-24 border-t-4">
+
+    <div class="container px-6 font-inter max-w-md mx-auto sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0 xl:flex xl:p-0">
+        <div class="lg:p-12 lg:flex-1 xl:p-12 xl:flex-auto">
+            <h3 class="text-4xl font-bold text-slate-800 sm:text-5xl"><span class="text-rose-400">Dimas</span> Habibi H
+            </h3>
+            <img src="img/gambar1.jpeg" alt=""
+                class="mt-4 rounded-xl shadow-xl sm:mt-6 sm:h-72 sm:w-full sm:object-cover sm:object-bottom md:object-cover md:object-center lg:hidden">
+            <h2 class="mt-6 text-2xl font-semibold text-slate-800 sm:mt-8 sm:text-4xl">Mari Belajar Programming</h2>
+            <p class="mt-2 text-slate-600 text-justify sm:mt-4 sm:text-xl xl:max-w-4xl">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quos, nobis reiciendis aspernatur cum
+                laboriosam eum voluptates numquam magni aliquid delectus sit suscipit voluptatibus aliquam reprehenderit
+                placeat, veniam vero nulla dignissimos culpa.
+            </p>
+            <div class="mt-4 sm:mt-6">
+                <a href="#"
+                    class="inline-block px-5 py-3 bg-gradient-to-bl from-yellow-300 via-pink-500 to to-blue-500 text-white font-semibold rounded-lg shadow-lg uppercase tracking-wider text-sm">Follow
+                    Instagram</a>
+            </div>
+        </div>
+        <div class="hidden lg:flex lg:w-1/2 xl:max-w-3xl xl:flex xl:p-0">
+            <img src="img/gambar1.jpeg" alt="" class="object-cover rounded-l-3xl">
+        </div>
+    </div>
+
+    <h2 class="mt-24 mb-10 text-center font-bold text-3xl text-slate-700">My Gallery</h2>
+
+    <div class="container px-6 mx-auto sm:flex sm:flex-wrap sm:gap-5 sm:justify-evenly">
+
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:w-64 md:w-80 sm:m-0 lg:w-72">
+            <img src="img/gambar1.jpeg" alt="image caption" class="w-full">
+            <div class="px-6 py-4 font-inter">
+                <div class="font-bold text-xl text-slate-700">Image title</div>
+                <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, in
+                    ?
+                </p>
+            </div>
+        </div>
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:w-64 md:w-80 sm:m-0 lg:w-72">
+            <img src="img/gambar1.jpeg" alt="image caption" class="w-full">
+            <div class="px-6 py-4 font-inter">
+                <div class="font-bold text-xl text-slate-700">Image title</div>
+                <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, in
+                    ?
+                </p>
+            </div>
+        </div>
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:w-64 md:w-80 sm:m-0 lg:w-72">
+            <img src="img/gambar1.jpeg" alt="image caption" class="w-full">
+            <div class="px-6 py-4 font-inter">
+                <div class="font-bold text-xl text-slate-700">Image title</div>
+                <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, in
+                    ?
+                </p>
+            </div>
+        </div>
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:w-64 md:w-80 sm:m-0 lg:w-72">
+            <img src="img/gambar1.jpeg" alt="image caption" class="w-full">
+            <div class="px-6 py-4 font-inter">
+                <div class="font-bold text-xl text-slate-700">Image title</div>
+                <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, in
+                    ?
+                </p>
+            </div>
+        </div>
+        <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:w-64 md:w-80 sm:m-0 lg:w-72">
+            <img src="img/gambar1.jpeg" alt="image caption" class="w-full">
+            <div class="px-6 py-4 font-inter">
+                <div class="font-bold text-xl text-slate-700">Image title</div>
+                <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, in
+                    ?
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mb-96"></div>
+
+
+    <script>
+        const checkbox = document.querySelector('#toggle');
+        const html = document.querySelector('html');
+
+        checkbox.addEventListener('click', function () {
+            checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+        });
+    </script>
+</body>
+
+</html>
